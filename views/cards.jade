@@ -1,0 +1,58 @@
+extends layout
+
+block content
+	script(src='/javascripts/cards.js')
+	h1= title
+	p Welcome to #{title}
+
+	// Wrapper
+	#wrapper
+
+		// Card info
+		#cardInfo
+			h2 Card Info
+			p
+				strong Title:
+				|  <span id='cardInfoTitle'></span>
+				br
+				strong Description:
+				|  <span id='cardInfoDescription'></span>
+				br
+				strong CardType:
+				|  <span id='cardInfoCardType'></span>
+				br
+				strong Week:
+				|  <span id='cardInfoWeek'></span>
+				br
+				strong Day:
+				|  <span id='cardInfoDay'></span>
+				br
+		// /CARD INFO
+		
+		// CARD LIST
+		h2 CARD List
+		#cardList
+			table
+				thead
+					th Title
+					th Description
+					th Delete?
+					tbody
+		// /CARD LIST
+
+		// ADD CARD
+		h2 Add Card
+		#addCard
+			fieldset
+				input#inputCardTitle(type='text', placeholder='Title')
+				input#inputCardDescription(type='text', placeholder='Description')
+				br
+				input#inputCardWeek(type='text', placeholder='Week')
+				input#inputCardDay(type='text', placeholder='Day')
+				br
+				select(id="cardtype")
+				br
+				button#btnAddCard Add Card
+		// /ADD CARD
+
+	// /WRAPPER

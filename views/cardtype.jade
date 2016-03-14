@@ -1,0 +1,29 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+
+	// Wrapper
+	#wrapper
+
+		// CARD LIST
+		h2 CARD Type List
+		#cardTypeList
+			table
+				thead
+					th Name
+					th Delete?
+					tbody
+		// /CARD LIST
+
+		// ADD CARD TYPE
+		h2 Add Card Type
+		#addCardType
+			fieldset
+				input#inputCardTypeName(type='text', placeholder='Title')
+				br
+				button#btnAddCardType Add Card
+		// /ADD CARD
+
+	// /WRAPPER

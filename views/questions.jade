@@ -1,0 +1,36 @@
+extends layout
+
+block content
+	script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+	script(src='/javascripts/questions.js')
+	h1= title
+	p Welcome to #{title}
+
+	// Wrapper
+	#wrapper
+
+		
+		// CARD LIST
+		h2 CARD List
+		#questionList
+			table
+				thead
+					th Title
+					th Description
+					th Delete?
+					tbody
+		// /CARD LIST
+
+		// ADD CARD
+		h2 Add Question
+		#addQuestion
+			fieldset
+				input#inputQuestion(type='text', placeholder='Question')
+				select(id="user")
+				br
+				select(id="language")
+				br
+				button#btnAddQuestion Add Question
+		// /ADD CARD
+
+	// /WRAPPER

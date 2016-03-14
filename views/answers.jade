@@ -1,0 +1,35 @@
+extends layout
+
+block content
+	script(src='/javascripts/answers.js')
+	h1= title
+	p Welcome to #{title}
+
+	// Wrapper
+	#wrapper
+
+		
+		// CARD LIST
+		h2 Answers List
+		#answersList
+			table
+				thead
+					th Title
+					th Description
+					th Delete?
+					tbody
+		// /CARD LIST
+
+		// ADD CARD
+		h2 Add Answer
+		#addAnswer
+			fieldset
+				input#inputAnswer(type='text', placeholder='Answer')
+				select(id="question")
+				br
+				select(id="language")
+				br
+				button#btnAddAnswer Add Answer
+		// /ADD CARD
+
+	// /WRAPPER
